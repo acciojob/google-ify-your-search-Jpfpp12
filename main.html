@@ -1,128 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Google Clone</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google</title>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
+    }
+
+    body {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
 
-    /* Navbar */
     .navbar {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 20px;
-      border-bottom: 1px solid #e0e0e0;
+      justify-content: flex-end;
+      padding: 16px 24px;
     }
 
-    .navbar .logo {
-      font-size: 22px;
-      color: #4285f4;
-      font-weight: bold;
+    .navbar a, .navbar button {
+      margin-left: 16px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
     }
 
-    .navbar .signin {
-      padding: 8px 16px;
+    .navbar button {
       background-color: #4285f4;
       color: white;
       border: none;
+      padding: 6px 12px;
       border-radius: 4px;
       cursor: pointer;
     }
 
-    /* Main content */
     .main {
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 40px 20px;
       text-align: center;
+      padding: 20px;
     }
 
-    .google-logo {
-      font-size: 48px;
-      color: #4285f4;
-      font-weight: bold;
-      margin-bottom: 20px;
+    .main img {
+      width: 272px;
+      height: auto;
+      margin-bottom: 24px;
     }
 
     .search-box {
       width: 100%;
-      max-width: 500px;
-      padding: 12px 20px;
-      font-size: 16px;
-      border: 1px solid #ddd;
+      max-width: 560px;
+      display: flex;
+      border: 1px solid #dfe1e5;
       border-radius: 24px;
-      outline: none;
-      box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-    .search-button {
-      margin-top: 20px;
+    .search-box input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .buttons {
+      margin-top: 24px;
+    }
+
+    .buttons button {
       padding: 10px 20px;
-      background-color: #f8f9fa;
-      border: 1px solid #dadce0;
+      margin: 0 6px;
+      font-size: 14px;
+      border: none;
       border-radius: 4px;
+      background-color: #f8f9fa;
       cursor: pointer;
     }
 
-    /* Footer */
     .footer {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      padding: 16px 20px;
+      padding: 16px 24px;
       background-color: #f2f2f2;
       font-size: 14px;
+      color: #555;
     }
 
     .footer a {
       text-decoration: none;
-      color: #1a0dab;
-      margin-left: 10px;
-    }
-
-    @media (max-width: 600px) {
-      .footer {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .footer div {
-        margin: 5px 0;
-      }
+      color: #555;
     }
   </style>
 </head>
 <body>
   <div class="navbar">
-    <div class="logo">Google</div>
-    <button class="signin">Sign in</button>
+    <a href="#">Gmail</a>
+    <a href="#">Images</a>
+    <button>Sign in</button>
   </div>
 
   <div class="main">
-    <div class="google-logo">Google</div>
-    <input type="text" class="search-box" placeholder="Search Google or type a URL" />
-    <button class="search-button">Google Search</button>
+    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo">
+    <div class="search-box">
+      <input type="text" placeholder="Search Google or type a URL">
+    </div>
+    <div class="buttons">
+      <button>Google Search</button>
+      <button>I'm Feeling Lucky</button>
+    </div>
   </div>
 
   <div class="footer">
     <div>
-      India
-      <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>
+      India | <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>
     </div>
     <div>
-      <!-- You can add more right-side footer links here -->
-      © 2025 Google Clone
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Settings</a>
     </div>
   </div>
 </body>
